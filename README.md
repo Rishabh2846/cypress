@@ -48,4 +48,6 @@ npx cypress run
 CI/CD pipeline created using GITHUB actions 
 Whenever there is a push action performed on this repository
 pipeline will triggered
+---
+
 Feel free to contribute or modify the tests as needed for your application!
