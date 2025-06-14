@@ -44,5 +44,9 @@ npx cypress run
 - [Cypress Best Practices](https://docs.cypress.io/guides/references/best-practices)
 
 ---
+## CI/CD Pipeline
+-CI/CD pipeline created using GITHUB actions Whenever there is a push action performed on this repository pipeline will triggered
+---
+
 
 Feel free to contribute or modify the tests as needed for your application!
