@@ -12,5 +12,8 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
+      - name: Run Cypress tests for a specific folder
+        run: npx cypress run --spec "cypress/e2e/1-getting-started/*.cy.js"
        
           
