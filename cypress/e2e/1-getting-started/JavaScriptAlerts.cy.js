@@ -16,7 +16,7 @@ describe( 'To check Javascript alerts', () => {
   expect(alertText).to.equal('I am a Js Alert');
   return true;
   });
-
+  cy.get("p[id='dialog-response']").should('contain', 'OK');
   })
 
   it('To check confirm dailog box - click OK', () => {
@@ -25,6 +25,7 @@ describe( 'To check Javascript alerts', () => {
   expect(confirmText).to.equal('I am a Js Confirm');
   return true; 
    });
+    cy.get("p[id='dialog-response']").should('contain', 'Ok');
   })
 
   it('To check confirm dailog box - click Cancel', () => {
@@ -33,15 +34,18 @@ describe( 'To check Javascript alerts', () => {
   expect(confirmText).to.equal('I am a Js Confirm');
   return false; 
     });
+     cy.get("p[id='dialog-response']").should('contain', 'Cancel');
   })
 
- it('should handle a prompt dialog', () => {
-cy.window().then((win) => {
-cy.stub(win, 'prompt').returns('testing');
-return true;
-});
-
-
+it('should handle a prompt dialog', () => {
+    cy.window().then((win) => {
+    cy.stub(win, 'prompt').returns('testing');
+    return true; // Ensure the stub is set up
+  });
+    
+    cy.get("button[id='js-prompt']").click();
+ 
+  cy.get("p[id='dialog-response']").should('contain', 'testing');
 });
 
 })
