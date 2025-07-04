@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 });
 
-describe( 'To check Javascript alerts', () => {
+describe( 'To check Iframes', () => {
   beforeEach(() => {
     cy.visit('https://practice.expandtesting.com/iframe')
   })
