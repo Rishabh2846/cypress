@@ -35,6 +35,15 @@ To run tests in headless mode:
 npx cypress run
 ```
 
+To run test for only file in headless mode
+```sh
+npx cypress run --spec "C:\Users\Rishabh Sinha\Documents\cypress\cypress\e2e\1-getting-started\drag_drop.cy.js" --headless
+```
+To run test for only file in headed mode
+```sh
+npx cypress run --spec "C:\Users\Rishabh Sinha\Documents\cypress\cypress\e2e\1-getting-started\drag_drop.cy.js" --headed
+```
+
 ## Writing Tests
 - Add new test files in the `cypress/e2e/` directory.
 - Use the existing examples as a reference for writing your own tests.
@@ -45,10 +54,10 @@ npx cypress run
 
 =======
 # CI/CD Pipeline
-CI/CD pipeline created using GITHUB actions 
-Whenever there is a push action performed on this repository
-pipeline will triggered
+- CI/CD pipeline created using GITHUB actions 
+- Whenever there is a push action performed on this repository
+- pipeline will triggered
 ---
 
 
-Feel free to contribute or modify the tests as needed for your application!
+- Feel free to contribute or modify the tests as needed for your application!
